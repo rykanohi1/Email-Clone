@@ -1,6 +1,9 @@
 import React from 'react';
-import FolderCount from './folder-count'
+import FolderCount from './folder'
 
-export default () => {
-    <span className='folder'
+export default (label, count, hasUnread) => {
+    <span> 
+        <span> {label} </span>
+        <FolderCount hasUnread={hasUnread} count={count}/>
+    </span>
 } 

@@ -6,9 +6,7 @@ import FolderCount from './folder-count';
 describe('FolderCount', () => {
     test('should display a number', () => {
         const testValue = '1'
-        const app = shallow(<FolderCount
-            count={testValue}
-/>);
+        const app = shallow(<FolderCount count={testValue}/>);
         expect(app.text()).toBe(testValue);
     })
     test('should display if has unread', () => {

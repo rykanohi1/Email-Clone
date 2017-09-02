@@ -3,10 +3,11 @@ import {shallow} from 'enzyme';
 import Folder from './folder'
 
 describe ('Folder', ()=> {
-    test ('should display a number', () => {
-        const testValue = 'title';
-        const app = shallow(<Folder label={testValue}/>);
+    test ('should display the title of the folder', () => {
+        const expected = 'title';
+        const app = shallow(<Folder label={expected}/>);
+        const actual = app.find('.folder-title').text().trim();
 
-        expect(app.text()).tobe(testValue);
+        expect(actual).toEqual(expected);
     })
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './folder-count.scss';
+import styles from './folder-list.scss';
 import Folder from '../folder/folder';
 
 export default ({folders}) => {
@@ -8,7 +8,7 @@ export default ({folders}) => {
             key={folder.id} 
             label={folder.label} 
             count={folder.count} 
-            has-unread={folder.hasUnread}/>
+            hasUnread={folder.hasUnread}/>
         )}
     </div>)
 }

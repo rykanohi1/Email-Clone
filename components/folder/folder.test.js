@@ -10,4 +10,11 @@ describe ('Folder', ()=> {
 
         expect(actual).toEqual(expected);
     })
+    test ('should have selected class when folder is selected', () => {
+        const expected = 1;
+        const app = shallow(<Folder isSelected={true}/>);
+        const actual = app.find('.selected').length;
+        
+        expect(actual).toEqual(expected);
+    })
 });

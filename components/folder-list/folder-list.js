@@ -7,7 +7,8 @@ export default ({folders}) => {
         {folders.map(folder => <Folder
             key={folder.id} 
             label={folder.label} 
-            count={folder.count} 
+            count={folder.count}
+            isSelected={folder.isSelected}
             hasUnread={folder.hasUnread}/>
         )}
     </div>)

@@ -10,7 +10,7 @@ function testContents() {
 import LayoutRightLeft from './left-right-layout';
 
 storiesOf('LayoutRightLeft', module)
-  .add('has unread', () => <LeftRightLayout
+  .add('basic layout', () => <LeftRightLayout
     className="test"
     children={testContents}
   />);

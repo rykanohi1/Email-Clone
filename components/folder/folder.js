@@ -6,8 +6,8 @@ export default ({label, count, hasUnread, isSelected}) => (
   <LeftRightLayout
     className={`folder ${isSelected ? 'selected' : ''}`}
     children={() => [
-      <span className="folder-title"> {label} </span>,
-      <FolderCount hasUnread={hasUnread} count={count}/>
+      <span key={1} className="folder-title"> {label} </span>,
+      <FolderCount key={2} hasUnread={hasUnread} count={count}/>
     ]}
   />
 )

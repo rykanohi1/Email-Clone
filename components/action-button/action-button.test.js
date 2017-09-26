@@ -9,5 +9,13 @@ describe ('ActionButton', () => {
     const app = shallow(<ActionButton imgSrc={image}/>);
     const actual = app.find('img').length;
     expect(actual).toEqual(expected);
-  })
+  });
+
+  test('root element of component should be a button', () => {
+    const expected = 'button';
+    const app = shallow(<ActionButton/>);
+    const actual = app.node.type;
+    expect(actual).toEqual(expected);
+  });
+
 });

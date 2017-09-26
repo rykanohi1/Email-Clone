@@ -2,7 +2,7 @@ import React from 'react';
 
 
 export default ({imgSrc}) => (
-  <div>
+  <button>
     <img src={imgSrc}/>
-  </div>
+  </button>
 )

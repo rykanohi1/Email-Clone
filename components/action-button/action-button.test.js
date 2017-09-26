@@ -18,4 +18,11 @@ describe ('ActionButton', () => {
     expect(actual).toEqual(expected);
   });
 
+  test('should display a label when given text', () => {
+    const expected = 1;
+    const text = 'a';
+    const app = shallow(<ActionButton label={text}/>);
+    const actual = app.find('span').length;
+    expect(actual).toEqual(expected);
+  });
 });

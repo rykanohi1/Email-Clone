@@ -13,7 +13,7 @@ describe ('ActionButton', () => {
 
   test('root element of component should be a button', () => {
     const expected = 'button';
-    const app = shallow(<ActionButton/>);
+    const app = shallow(<ActionButton imgSrc={'test'}/>);
     const actual = app.node.type;
     expect(actual).toEqual(expected);
   });
@@ -28,8 +28,15 @@ describe ('ActionButton', () => {
 
   test('should not display an icon if not provided with an image', () => {
     const expected = 0;
-    const app = shallow(<ActionButton/>);
+    const app = shallow(<ActionButton label={'test'}/>);
     const actual = app.find('img').length;
+    expect(actual).toEqual(expected);
+  });
+
+  test('should not display a label if given no text', () => {
+    const expected = 0;
+    const app = shallow(<ActionButton imgSrc={'test'}/>);
+    const actual = app.find('span').length;
     expect(actual).toEqual(expected);
   });
 });

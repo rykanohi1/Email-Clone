@@ -1,9 +1,8 @@
 import React from 'react';
 
-
 export default ({imgSrc, label}) => (
   <button>
-    <img src={imgSrc}/>
+    {imgSrc && <img src={imgSrc}/>}
     <span>{label}</span>
   </button>
 )

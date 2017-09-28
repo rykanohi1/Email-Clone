@@ -5,7 +5,7 @@ import ActionButton from './action-button';
 describe ('ActionButton', () => {
   test('should display an icon when provided with an image', () => {
     const expected = 1;
-    const image = '';
+    const image = 'src';
     const app = shallow(<ActionButton imgSrc={image}/>);
     const actual = app.find('img').length;
     expect(actual).toEqual(expected);
@@ -23,6 +23,13 @@ describe ('ActionButton', () => {
     const text = 'a';
     const app = shallow(<ActionButton label={text}/>);
     const actual = app.find('span').length;
+    expect(actual).toEqual(expected);
+  });
+
+  test('should not display an icon if not provided with an image', () => {
+    const expected = 0;
+    const app = shallow(<ActionButton/>);
+    const actual = app.find('img').length;
     expect(actual).toEqual(expected);
   });
 });

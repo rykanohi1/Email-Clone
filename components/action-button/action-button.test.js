@@ -39,4 +39,11 @@ describe ('ActionButton', () => {
     const actual = app.find('span').length;
     expect(actual).toEqual(expected);
   });
+
+      test('should have a title if given a title', () => {
+    const expected = 'test';
+    const app = shallow(<ActionButton title={expected} imgSrc={'mock'}/>);
+    const actual = app.props().title;
+    expect(actual).toEqual(expected);
+  });
 });

@@ -6,6 +6,7 @@ export default ({imgSrc, label, title}) => {
     throw new Error('imgSrc and label cannot both be blank');
   }
   return (
+    // In the case of most attributes, If the attribute is falsy, React will not render it
     <button title={title}>
       {imgSrc && <img src={imgSrc}/>}
       {label && <span>{label}</span>}

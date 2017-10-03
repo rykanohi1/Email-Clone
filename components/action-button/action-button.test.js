@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import ActionButton from './action-button';
 
-describe ('ActionButton', () => {
+describe('ActionButton', () => {
   test('should display an icon when provided with an image', () => {
     const expected = 1;
     const image = 'src';
@@ -40,7 +40,7 @@ describe ('ActionButton', () => {
     expect(actual).toEqual(expected);
   });
 
-      test('should have a title if given a title', () => {
+  test('should have a title if given a title', () => {
     const expected = 'test';
     const app = shallow(<ActionButton title={expected} imgSrc={'mock'}/>);
     const actual = app.props().title;

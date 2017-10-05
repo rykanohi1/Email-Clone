@@ -1,8 +1,9 @@
 import React from 'react';
 
 
-export default ({imgSrc}) => (
+export default ({imgSrc, action, label, popup}) => (
   <div>
-    <img src={imgSrc}/>
+    <img className="action-button" src={imgSrc} onClick={action} onHover={popup}/>
+    <span>{label}</span>
   </div>
 )

@@ -56,7 +56,15 @@ describe('ActionButton', () => {
   });
 
   test('should indicate contract violation if no imgSrc or label is provided', () => {
-      expect(() => shallow(<ActionButton action={noop}/>)).toThrow();
+    expect(() => shallow(<ActionButton action={noop}/>)).toThrow();
   });
 
+  test('run an action when given an action', () => {
+    const testFn = jest.fn();
+    const expected = 1;
+    const app = shallow(<ActionButton action={testFn} label={'test'}/>);
+    app.simulate('click');
+    const actual = testFn.mock.calls.length;
+    expect(actual).toEqual(expected);
+  });
 });

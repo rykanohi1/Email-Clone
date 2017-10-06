@@ -18,7 +18,7 @@ export default ({imgSrc, label, title, action}) => {
   }
   return (
     // In the case of most attributes, If the attribute is falsy, React will not render it
-    <button title={title}>
+    <button title={title} onClick={action}>
       {imgSrc && <img src={imgSrc}/>}
       {label && <span>{label}</span>}
     </button>

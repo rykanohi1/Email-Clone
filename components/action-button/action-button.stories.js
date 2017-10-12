@@ -23,6 +23,4 @@ storiesOf('ActionButton', module)
     title='sends an alert'
     label='Alert'
     imgSrc='https://s14-eu5.ixquick.com/cgi-bin/serveimage?url=https:%2F%2Fimage.flaticon.com%2Ficons%2Fsvg%2F179%2F179386.svg&sp=63e4e68091abd78d25c6023cac937fa2'
-    action={alert('You just clicked on me')}/>);
-
-
+    action={() => alert('You just clicked on me')}/>);

@@ -10,4 +10,7 @@ describe('DropDown', () => {
     const actual = app.find('ul').children().length;
     expect(actual).toEqual(expected);
   });
+  test('contract should fail if given invalid items', ()=> {
+      expect(shallow(<DropDown items={}/>)).toThrow();
+  });
 });

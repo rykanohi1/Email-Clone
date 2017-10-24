@@ -11,6 +11,6 @@ describe('DropDown', () => {
     expect(actual).toEqual(expected);
   });
   test('contract should fail if given invalid items', ()=> {
-      expect(shallow(<DropDown items={}/>)).toThrow();
+      expect(shallow(<DropDown items='test'/>)).toThrow();
   });
 });

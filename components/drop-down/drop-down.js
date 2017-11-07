@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import ActionButton from './action-button';
+import ActionButton from '../action-button/action-button';
 
 export default ({items}) => {
     const itemType = items.map(item => typeof item);

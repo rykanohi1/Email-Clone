@@ -1,4 +1,5 @@
 import React from 'react';
+import ActionButton from '../action-button/action-button';
 
 export default ({items}) => {
 
@@ -12,11 +13,20 @@ export default ({items}) => {
     }
   });
 
+    const toggleList = ()=>{
+        const list = document.getElementById('itemList');
+        if (list.style !== 'hidden-dropdown') {
+            list.style = 'hidden-dropdown';
+        }else {
+            list.style = 'dropdown';
+        }
+    };
   return (
     <div>
-      <ul>
-        {items.map(item => <li key={item.id}>{item.value}</li>)}
-      </ul>
+        <ActionButton action={toggleList()}/>
+        <ul id='itemList' className='dropdown'>
+            {items.map(item => <li key={item.id}>{item.value}</li>)}
+        </ul>
     </div>
   );
 }

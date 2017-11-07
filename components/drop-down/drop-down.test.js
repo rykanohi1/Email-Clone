@@ -5,7 +5,7 @@ import DropDown from './drop-down';
 describe('DropDown', () => {
   test('should display a list of items when given one', ()=> {
     const expected= 3;
-    const list = ['item 1', 'item 2', 'item 3'];
+    const list = [{id: 1, value: 1}, {id: 2, value: 2}, {id: 3, value: 3}];
     const app = shallow(<DropDown items={list}/>);
     const actual = app.find('ul').children().length;
     expect(actual).toEqual(expected);

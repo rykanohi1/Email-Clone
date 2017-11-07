@@ -1,12 +1,18 @@
-// @flow
 import React from 'react';
 import ActionButton from '../action-button/action-button';
 
 export default ({items}) => {
-    const itemType = items.map(item => typeof item);
-    if(itemType !== 'object'){
-        throw new Error('must provide valid items');
+
+  if(!Array.isArray(items)) {
+    throw new Error('must be an array')
+  }
+
+  items.forEach(item => {
+    if(typeof item !== 'object' && !('id' in item) && !('value' in item)) {
+      throw new Error('invalid object')
     }
+  });
+
     const toggleList = ()=>{
         const list = document.getElementById('itemList');
         if (list.style !== 'hidden-dropdown') {
@@ -14,7 +20,7 @@ export default ({items}) => {
         }else {
             list.style = 'dropdown';
         }
-    }
+    };
   return (
     <div>
         <ActionButton action={toggleList()}/>
@@ -22,5 +28,5 @@ export default ({items}) => {
             {items.map(item => <li key={item.id}>{item.value}</li>)}
         </ul>
     </div>
-    );
+  );
 }

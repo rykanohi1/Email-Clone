@@ -5,7 +5,7 @@ export default class DropDown extends Component {
 
   constructor(props) {
     super(props);
-
+    this.toggleDisplay = this.toggleDisplay.bind(this);
     this.state = {
       isHidden: true
     };
@@ -24,12 +24,17 @@ export default class DropDown extends Component {
   /**
    * toggles the display
    */
-  toggleDisplay = () => this.setState(() => this.state.isHidden = !this.state.isHidden);
+  toggleDisplay(){
+    this.setState(() => {
+      debugger;
+      this.state.isHidden = !this.state.isHidden
+    });
+  };
 
   render() {
     return (
-      <div>
-        <ActionButton action={this.toggleDisplay}/>
+      <div className='drop-down'>
+        <ActionButton action={this.toggleDisplay} label={this.props.label}/>
         <ul className={`dropdown ${this.state.isHidden ? 'show' : 'hide'}`}>
           {this.props.items.map(item => <li key={item.id}>{item.value}</li>)}
         </ul>

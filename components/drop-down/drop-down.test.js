@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import DropDown from './drop-down';
 
 describe('DropDown', () => {
@@ -20,6 +20,10 @@ describe('DropDown', () => {
     expect(hasThrown).toEqual(true);
   });
   test('should toggle list when clicked on', () => {
-
+    const expected = false;
+    const app = mount(<DropDown label="ghjjff" items={[{id: 1, value: 2}, {id: 3, value: 4}]} />);
+    app.find('.action-button').simulate('click');
+    const actual = app.find('ul').hasClass('hide');
+    expect(expected).toEqual(actual);
   })
 });

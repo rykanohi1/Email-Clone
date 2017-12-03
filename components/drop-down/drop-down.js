@@ -1,24 +1,44 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ActionButton from '../action-button/action-button';
 
-export default ({items, isHidden, toggleDisplay}) => {
+export default class DropDown extends Component {
 
-  if (!Array.isArray(items)) {
-    throw new Error('must be an array')
+  constructor(props) {
+    super(props);
+    this.toggleDisplay = this.toggleDisplay.bind(this);
+    this.state = {
+      isHidden: true
+    };
+
+    this.props.items.forEach(item => {
+      if (typeof item !== 'object' || !('id' in item) && !('value' in item)) {
+        throw new Error('invalid object')
+      }
+    });
+
+    if (!Array.isArray(this.props.items)) {
+      throw new Error('must be an array')
+    }
   }
 
-  items.forEach(item => {
-    if (typeof item !== 'object' || !('id' in item) && !('value' in item)) {
-      throw new Error('invalid object')
-    }
-  });
+  /**
+   * toggles the display
+   */
+  toggleDisplay(){
+    this.setState(() => {
+      debugger;
+      this.state.isHidden = !this.state.isHidden
+    });
+  };
 
-  return (
-    <div>
-      <ActionButton action={toggleDisplay()}/>
-      <ul id='itemList' className={`dropdown ${isHidden}`}>
-        {items.map(item => <li key={item.id}>{item.value}</li>)}
-      </ul>
-    </div>
-  );
+  render() {
+    return (
+      <div className='drop-down'>
+        <ActionButton action={this.toggleDisplay} label={this.props.label}/>
+        <ul className={`dropdown ${this.state.isHidden ? 'show' : 'hide'}`}>
+          {this.props.items.map(item => <li key={item.id}>{item.value}</li>)}
+        </ul>
+      </div>
+    );
+  }
 }

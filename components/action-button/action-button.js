@@ -1,14 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-
-export default ({imgSrc, action, label, popup}) => (
-  <div>
-    <img className="action-button" src={imgSrc} onClick={action} onHover={popup}/>
-    <span>{label}</span>
-  </div>
-)
-=======
 // What do I expect from my callers
 /**
  * Renders an action button
@@ -34,4 +25,3 @@ export default ({imgSrc, label, title, action}) => {
   );
   // What does my caller expect from me?
 }
->>>>>>> 5c50a66cfcc8fdfd0510b56defecf2ab512217e1

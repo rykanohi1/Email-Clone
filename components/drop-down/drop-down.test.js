@@ -21,7 +21,17 @@ describe('DropDown', () => {
   });
   test('should toggle list when clicked on', () => {
     const expected = false;
-    const app = mount(<DropDown label="ghjjff" items={[{id: 1, value: 2}, {id: 3, value: 4}]} />);
+    const app = mount(<DropDown label="ghjjff" items=
+    {[{id: 1, value:{
+      title:"test",
+      label:"test slot 1",
+      action:
+    }}, 
+    {id: 2, value: {
+      title:"test",
+      label:"test slot 2",
+      action:
+    }}]} />);
     app.find('.action-button').simulate('click');
     const actual = app.find('ul').hasClass('hide');
     expect(expected).toEqual(actual);

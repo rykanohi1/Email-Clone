@@ -35,10 +35,10 @@ export default class DropDown extends Component {
       <div className='drop-down'>
         <ActionButton action={this.toggleDisplay} label={this.props.label}/>
         <ul className={`dropdown ${this.state.isHidden ? 'show' : 'hide'}`}>
-          {this.props.items.map(item => <li key={item.id}><ActionButton title={item.title} 
-                                                                        label={item.label} 
-                                                                        imgSrc={item.imgSrc} 
-                                                                        action={item.action}/></li>)}
+          {this.props.items.map(item => <li key={item.id}><ActionButton title={item.value.title}
+                                                                        label={item.value.label}
+                                                                        imgSrc={item.value.imgSrc}
+                                                                        action={item.value.action}/></li>)}
         </ul>
       </div>
     );

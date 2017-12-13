@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 import DropDown from './drop-down';
 
 describe('DropDown', () => {
@@ -21,8 +21,20 @@ describe('DropDown', () => {
   });
   test('should toggle list when clicked on', () => {
     const expected = false;
-    const app = mount(<DropDown label="ghjjff" items={[{id: 1, value: 2}, {id: 3, value: 4}]} />);
-    app.find('.action-button').simulate('click');
+    const app = mount(<DropDown label="ghjjff" items={[{
+      id: 1, value: {
+        title: "test",
+        label: "is a test",
+        action: ()=> null
+      }
+    }, {
+      id: 3, value: {
+        title: "moneky",
+        label: "funk",
+        action: ()=> null
+      }
+    }]}/>);
+    app.find('[title="expand-options"]').simulate('click');
     const actual = app.find('ul').hasClass('hide');
     expect(expected).toEqual(actual);
   })

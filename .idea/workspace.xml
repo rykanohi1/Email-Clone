@@ -4,9 +4,7 @@
     <list default="true" id="9a6ba9c7-f857-4a4a-916d-3e4471fd3e36" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/components/drop-down/drop-down.js" afterPath="$PROJECT_DIR$/components/drop-down/drop-down.js" />
-      <change beforePath="$PROJECT_DIR$/components/drop-down/drop-down.stories.js" afterPath="$PROJECT_DIR$/components/drop-down/drop-down.stories.js" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/components/drop-down/drop-down.test.js" afterPath="$PROJECT_DIR$/components/drop-down/drop-down.test.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,18 +21,18 @@
       <file leaf-file-name="drop-down.stories.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/drop-down/drop-down.stories.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="17">
               <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="drop-down.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="drop-down.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/drop-down/drop-down.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="31" column="4" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+            <state relative-caret-position="85">
+              <caret line="35" column="39" lean-forward="false" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -50,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="drop-down.test.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="drop-down.test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/drop-down/drop-down.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -108,9 +106,9 @@
         <option value="$PROJECT_DIR$/components/throw-me-away.js" />
         <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/components/action-button/action-button.js" />
-        <option value="$PROJECT_DIR$/components/drop-down/drop-down.test.js" />
         <option value="$PROJECT_DIR$/components/drop-down/drop-down.stories.js" />
         <option value="$PROJECT_DIR$/components/drop-down/drop-down.js" />
+        <option value="$PROJECT_DIR$/components/drop-down/drop-down.test.js" />
       </list>
     </option>
   </component>
@@ -155,7 +153,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -184,7 +182,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -266,22 +264,11 @@
       <workItem from="1512532729616" duration="51000" />
       <workItem from="1512615632443" duration="593000" />
       <workItem from="1513134520521" duration="99000" />
+      <workItem from="1513134716134" duration="1706000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Jest - 2017.11.10 at 05h 05m 17s.xml">
-      <configuration name="Jest" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="Jest - 2017.11.25 at 04h 49m 01s.xml">
-      <configuration name="Jest" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="Jest - 2017.11.25 at 04h 53m 39s.xml">
-      <configuration name="Jest" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="Jest - 2017.11.25 at 04h 55m 01s.xml">
-      <configuration name="Jest" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
     <history-entry file="Jest - 2017.11.25 at 04h 56m 16s.xml">
       <configuration name="Jest" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
@@ -300,24 +287,37 @@
     <history-entry file="Jest - 2017.11.25 at 05h 03m 46s.xml">
       <configuration name="Jest" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
+    <history-entry file="Jest - 2017.12.13 at 04h 38m 13s.xml">
+      <configuration name="Jest" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="Jest - 2017.12.13 at 04h 39m 32s.xml">
+      <configuration name="Jest" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="Jest - 2017.12.13 at 04h 40m 34s.xml">
+      <configuration name="Jest" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="Jest - 2017.12.13 at 04h 41m 44s.xml">
+      <configuration name="Jest" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47951000" />
+    <option name="totallyTimeSpent" value="49657000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1904762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39473686" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39473686" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4506579" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.53289473" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Flow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -355,7 +355,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/components/drop-down/drop-down.test.js</url>
+          <line>37</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JavaScriptTestRunnerJest">
@@ -668,16 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/drop-down/drop-down.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/action-button/action-button.stories.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -695,7 +693,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/drop-down/drop-down.stories.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="17">
           <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="34" />
           <folding />
         </state>
@@ -703,9 +701,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/drop-down/drop-down.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="31" column="4" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+        <state relative-caret-position="85">
+          <caret line="35" column="39" lean-forward="false" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/drop-down/drop-down.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

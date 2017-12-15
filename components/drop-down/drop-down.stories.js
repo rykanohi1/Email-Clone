@@ -42,4 +42,4 @@ const items_2 = [{
 
 storiesOf('DropDown', module)
   .add('with text', () => <DropDown label='text drop-down' items={items}/>)
-  .add('with pictures', ()=> <DropDown imgSrc='.../images/index.png' items={items}/>)
+  .add('with pictures', ()=> <DropDown imgSrc='.../images/index.png' items={items_2}/>)

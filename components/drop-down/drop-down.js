@@ -26,19 +26,20 @@ export default class DropDown extends Component {
    */
   toggleDisplay(){
     this.setState(() => {
-      debugger;
       this.state.isHidden = !this.state.isHidden
     });
   };
   render() {
     return (
       <div className='drop-down'>
-        <ActionButton imgSrc={this.props.imgSrc} action={this.toggleDisplay} label={this.props.label} title='expand-options'/>
+        <ActionButton imgSrc={this.props.imgSrc} action={this.toggleDisplay} label={this.props.label} title='expand-options' />
         <ul className={`dropdown ${this.state.isHidden ? 'show' : 'hide'}`}>
-          {this.props.items.map(item => <li key={item.id}><ActionButton title={item.value.title}
-                                                                        label={item.value.label}
-                                                                        imgSrc={item.value.imgSrc}
-                                                                        action={item.value.action}/></li>)}
+          {this.props.items.map(item => <li key={item.id}>
+          <ActionButton title={item.value.title}
+                        label={item.value.label}
+                        imgSrc={item.value.imgSrc}
+                        action={item.value.action} />
+          </li>)}
         </ul>
       </div>
     );

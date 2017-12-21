@@ -17,11 +17,10 @@ export default ({imgSrc, label, title, action}) => {
     throw new Error('must provide an action to the button');
   }
   return (
-    // In the case of most attributes, If the attribute is falsy, React will not render it
     <button title={title} onClick={action} className='action-button'>
       {imgSrc && <img src={imgSrc}/>}
       {label && <span>{label}</span>}
+      <span>The cat pooped</span>
     </button>
   );
-  // What does my caller expect from me?
 }

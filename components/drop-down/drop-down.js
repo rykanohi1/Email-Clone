@@ -25,9 +25,9 @@ export default class DropDown extends Component {
    * toggles the display
    */
   toggleDisplay(){
-    this.setState(() => {
-      this.state.isHidden = !this.state.isHidden
-    });
+    this.setState(state => ({
+      isHidden: !state.isHidden
+    }));
   };
   render() {
     return (

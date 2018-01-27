@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './drop-down.scss';
 import { storiesOf } from '@storybook/react';
 import DropDown from './drop-down';
 

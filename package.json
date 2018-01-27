@@ -7,7 +7,9 @@
     "start": "webpack-dev-server --progress --colors --hot --config ./webpack.config.babel.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest"
+    "test": "jest",
+    "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
+    "webpack": "webpack"
   },
   "keywords": [],
   "author": "",

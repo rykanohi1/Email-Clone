@@ -28,8 +28,18 @@ $black: #000000;
 .dropdown.show li button {
     height: 60px;
     width: 120px;
-    border-radius: 25px;
+    border-radius: 15px;
     background-color: $blue;
     font-size: 15px;
     color: $white;
+}
+
+.dropdown.show li button:hover {
+    height: 60px;
+    width: 120px;
+    border-radius: 15px;
+    background-color: $blue;
+    font-size: 15px;
+    color: $white;
+    box-shadow: 5px 10px $black;
 }

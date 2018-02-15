@@ -28,14 +28,14 @@ describe('DropDown', () => {
         action: ()=> null
       }
     }, {
-      id: 3, value: {
+      id: 2, value: {
         title: "moneky",
         label: "funk",
         action: ()=> null
       }
     }]}/>);
     app.find('[title="expand-options"]').simulate('click');
-    const actual = app.find('ul').hasClass('hide');
-    expect(expected).toEqual(actual);
+    const actual = app.find('ul').hasClass('dropdown hide');
+    expect(actual).toEqual(expected);
   })
 });

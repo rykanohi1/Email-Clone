@@ -8,11 +8,15 @@ export default class SearchBar extends Component {
             searchTerm: ''
         }
     }
-   render() { 
+    search() {
+        return true;
+    }
+
+    render() { 
     return (
     <div>
         <input type="text" defaultValue={this.state.searchTerm}/>
-        <ActionButton title="search" imgSrc={this.props.imgSrc} action=''/>
+        <ActionButton title="search" label={this.props.label} imgSrc={this.props.imgSrc} action={this.search}/>
     </div>
     );
    };

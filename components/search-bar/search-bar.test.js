@@ -15,5 +15,9 @@ describe ('SearchBar', () => {
                 const app = mount (<SearchBar label="searches"/>);
                 const actual = app.instance().search();
                 expect(actual).toEqual(expected);
+        });
+
+        test('should suggest results as input gets longer', () => {
+                
         })
 });

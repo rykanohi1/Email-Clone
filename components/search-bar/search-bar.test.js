@@ -12,12 +12,17 @@ describe ('SearchBar', () => {
         
         test('should perform search action when clicked on', () => {
                 const expected = true;
-                const app = mount (<SearchBar label="searches"/>);
+                const app = mount (<SearchBar/>);
                 const actual = app.instance().search();
                 expect(actual).toEqual(expected);
         });
 
-        test('should suggest results as input gets longer', () => {
-                
+        test('updateSearch method should be called when input changes', () => {
+                const expected = "input changed";
+                const app = mount (<SearchBar/>);
+                app.find('input').value = "input changed";
+                app.find('input').simulate('keydown');
+                const actual = app.state.searchTerm;
+                expect(actual).toEqual(expected);
         })
 });

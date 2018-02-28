@@ -7,16 +7,21 @@ export default class SearchBar extends Component {
         this.state= {
             searchTerm: ''
         }
-    }
+    };
+    
     search() {
         return true;
-    }
+    };
+
+    updateSearch(event) {
+        this.setState({searchTerm: event.target.value});
+    };
 
     render() { 
     return (
     <div>
-        <input type="text" defaultValue={this.state.searchTerm}/>
-        <ActionButton title="search" label={this.props.label} imgSrc={this.props.imgSrc} action={this.search}/>
+        <input type="text" value={this.state.searchTerm} onChange={this.updateSearch.bind(this)}/>
+        <ActionButton title="searchButton" label="search" imgSrc={this.props.imgSrc} action={this.search}/>
     </div>
     );
    };

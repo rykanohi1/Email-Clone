@@ -18,10 +18,10 @@ describe ('SearchBar', () => {
         });
 
         test('updateSearch method should be called when input changes', () => {
-                const expected = "input changed";
+                const expected = "a";
                 const app = mount (<SearchBar/>);
-                app.find('input').value = "input changed";
-                app.find('input').simulate('keydown');
+                app.find('input').value = "a";
+                app.find('input').simulate('keydown', {which: 'a'});
                 const actual = app.state.searchTerm;
                 expect(actual).toEqual(expected);
         })

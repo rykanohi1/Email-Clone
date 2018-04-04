@@ -11,7 +11,11 @@ export default class SearchBar extends Component {
   };
 
   search() {
-    return true;
+    let filteredContacts = this.props.contacts.filter(
+      (contact) => {
+        return contact.name.indexOf(this.state.searchTerm) !== -1;
+      }
+    )
   };
 
   updateSearch(event) {
@@ -26,10 +30,10 @@ export default class SearchBar extends Component {
           type="search"
           value={this.state.searchTerm}
           onChange={this.updateSearch}/>
-        <ActionButton title="searchButton" label="search" imgSrc={this.props.imgSrc} action={this.search}/>
-        <div>
-          {this.state.searchTerm}
-        </div>
+        <ActionButton title="searchButton" 
+                      label="search" 
+                      imgSrc={this.props.imgSrc} 
+                      action={this.search}/>
       </div>
     );
   };

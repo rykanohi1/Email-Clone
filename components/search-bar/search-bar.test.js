@@ -18,9 +18,9 @@ describe('SearchBar', () => {
   });
 
   test('updateSearch method should be called when input changes', () => {
-    const expected = "a";
+    const expected = "test";
     const app = mount(<SearchBar/>);
-    app.find('.search-filter').simulate('change', {target: {value: 'a'}});
+    app.find('.search-filter').simulate('change', {target: {value: 'test'}});
     const actual = app.state().searchTerm;
     expect(actual).toEqual(expected);
   })

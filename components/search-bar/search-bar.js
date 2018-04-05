@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ActionButton from '../action-button/action-button';
+import ContactList from '../contact-list/contact-list';
 
 export default class SearchBar extends Component {
   constructor(props) {
@@ -34,6 +35,7 @@ export default class SearchBar extends Component {
                       label="search" 
                       imgSrc={this.props.imgSrc} 
                       action={this.search}/>
+        <ContactList contacts={this.props.contacts}/>
       </div>
     );
   };

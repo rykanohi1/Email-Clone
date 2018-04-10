@@ -20,15 +20,11 @@ export default class SearchBar extends Component {
     this.setState({searchTerm: event.target.value});
   };
 
-  filter() {
-    this.state.contacts.map(
+  render() {
+    let filteredContacts = this.state.contacts.filter(
       (contact) => {
         return contact.username.toLowerCase().indexOf(this.state.searchTerm.toLowerCase()) !== -1;
       });
-  }
-
-  render() {
-    let filteredContacts = this.filter();
     return (
       <div>
         <input

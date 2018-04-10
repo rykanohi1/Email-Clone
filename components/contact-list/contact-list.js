@@ -12,8 +12,8 @@ return (
           <ActionButton
             className="contact-profile"
             imgSrc={contact.imgSrc}
-            title={contact.username}
-            label={contact.address}
+            title={contact.address}
+            label={contact.username}
             action={() => alert("history unavailable")}
           />,
           <ActionButton

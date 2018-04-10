@@ -12,8 +12,8 @@ username: 'Abby',
 address: 'Abby02@email.com'},
 
 {imgSrc: 'http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png',
-username: 'Mike',
-address: 'Mike03@otheremail.com'}];
+username: 'Mikey',
+address: 'Mikey03@otheremail.com'}];
 
 storiesOf('SearchBar', module)
   .add('default', () => <SearchBar contacts={contacts} imgSrc='http://icons.iconarchive.com/icons/custom-icon-design/flatastic-1/256/search-icon.png'/>);

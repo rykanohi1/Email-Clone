@@ -6,17 +6,14 @@ export default class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchTerm: ''
+      searchTerm: '',
+      contacts: props.contacts
     };
     this.updateSearch = this.updateSearch.bind(this);
   };
 
   search() {
-    let filteredContacts = this.props.contacts.filter(
-      (contact) => {
-        return contact.name.indexOf(this.state.searchTerm) !== -1;
-      }
-    )
+  
   };
 
   updateSearch(event) {
@@ -24,18 +21,23 @@ export default class SearchBar extends Component {
   };
 
   render() {
+    let filteredContacts = this.state.contacts.filter(
+      (contact) => {
+        return contact.username.toLowerCase().indexOf(this.state.searchTerm.toLowerCase()) !== -1;
+      });
     return (
       <div>
         <input
           className="search-filter"
           type="search"
+          placeholder="search contacts"
           value={this.state.searchTerm}
           onChange={this.updateSearch}/>
         <ActionButton title="searchButton" 
                       label="search" 
                       imgSrc={this.props.imgSrc} 
                       action={this.search}/>
-        <ContactList contacts={this.props.contacts}/>
+        <ContactList contacts={filteredContacts}/>
       </div>
     );
   };

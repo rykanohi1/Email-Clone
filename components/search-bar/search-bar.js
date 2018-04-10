@@ -13,18 +13,22 @@ export default class SearchBar extends Component {
   };
 
   search() {
-  
+    return true;
   };
 
   updateSearch(event) {
     this.setState({searchTerm: event.target.value});
   };
 
-  render() {
-    let filteredContacts = this.state.contacts.filter(
+  filter() {
+    this.state.contacts.map(
       (contact) => {
         return contact.username.toLowerCase().indexOf(this.state.searchTerm.toLowerCase()) !== -1;
       });
+  }
+
+  render() {
+    let filteredContacts = this.filter();
     return (
       <div>
         <input

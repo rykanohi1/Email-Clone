@@ -7,7 +7,8 @@ export default class SearchBar extends Component {
     super(props);
     this.state = {
       searchTerm: '',
-      contacts: props.contacts
+      contacts: props.contacts || [],
+      isVisible: false
     };
     this.updateSearch = this.updateSearch.bind(this);
   };
@@ -16,6 +17,10 @@ export default class SearchBar extends Component {
     return true;
   };
 
+  showContacts(event) {
+    this.setState({isVisible: !isVisible});
+  }
+
   updateSearch(event) {
     this.setState({searchTerm: event.target.value});
   };
@@ -23,7 +28,7 @@ export default class SearchBar extends Component {
   render() {
     let filteredContacts = this.state.contacts.filter(
       (contact) => {
-        return contact.username.toLowerCase().indexOf(this.state.searchTerm.toLowerCase()) !== -1;
+        return contact.username.toLowerCase().includes(this.state.searchTerm.toLowerCase());
       });
     return (
       <div>
@@ -32,12 +37,15 @@ export default class SearchBar extends Component {
           type="search"
           placeholder="search contacts"
           value={this.state.searchTerm}
-          onChange={this.updateSearch}/>
+          onChange={this.updateSearch}
+          onClick={this.showContacts}/>
         <ActionButton title="searchButton" 
                       label="search" 
                       imgSrc={this.props.imgSrc} 
                       action={this.search}/>
+        <div className={this.state.isVisible ? 'show' : 'hide'}>              
         <ContactList contacts={filteredContacts}/>
+        </div>
       </div>
     );
   };

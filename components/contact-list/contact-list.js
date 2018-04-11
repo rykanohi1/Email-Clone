@@ -7,6 +7,7 @@ return (
   <div className="contact-list">
     {contacts.map(contact => (
       <LeftRightLayout
+        key={contact.id}
         className="contact"
         children={() => [
           <ActionButton

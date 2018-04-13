@@ -1,11 +1,9 @@
 .contact-list {
     display: flex;
-}
-
-.show {
+    &.show {
     display: block
-}
-
-.hide {
-    visibility: hidden
+    }
+    &.hide {
+    display: none
+    }
 }

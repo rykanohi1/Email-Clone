@@ -5,21 +5,24 @@ import ContactList from '../contact-list/contact-list';
 export default class SearchBar extends Component {
   constructor(props) {
     super(props);
+    this.updateSearch = this.updateSearch.bind(this);
+    this.showContacts = this.showContacts.bind(this);
     this.state = {
       searchTerm: '',
       contacts: props.contacts || [],
       isVisible: false
     };
-    this.updateSearch = this.updateSearch.bind(this);
   };
 
   search() {
     return true;
   };
 
-  showContacts(event) {
-    this.setState({isVisible: !isVisible});
-  }
+  showContacts() {
+    this.setState(state => ({
+      isVisible: !state.isVisible
+    }));
+  };
 
   updateSearch(event) {
     this.setState({searchTerm: event.target.value});
@@ -31,21 +34,20 @@ export default class SearchBar extends Component {
         return contact.username.toLowerCase().includes(this.state.searchTerm.toLowerCase());
       });
     return (
-      <div>
+      <div className="search-bar" onFocusOut={this.showContacts}>
         <input
           className="search-filter"
           type="search"
           placeholder="search contacts"
           value={this.state.searchTerm}
           onChange={this.updateSearch}
-          onClick={this.showContacts}/>
+          onClick={this.showContacts}
+        />
         <ActionButton title="searchButton" 
                       label="search" 
                       imgSrc={this.props.imgSrc} 
-                      action={this.search}/>
-        <div className={this.state.isVisible ? 'show' : 'hide'}>              
-        <ContactList contacts={filteredContacts}/>
-        </div>
+                      action={this.search}/>           
+        <ContactList className={this.state.isVisible ? 'show' : 'hide'} contacts={filteredContacts}/>
       </div>
     );
   };

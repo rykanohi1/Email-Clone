@@ -1,7 +1,9 @@
-.contact-list.hide {
-    visibility: hidden
+.contact-list {
+    &.show {
+        display: block
+    }
+    &.hide{
+        display: none
+    }
 }
 
-.show {
-    display: block
-}

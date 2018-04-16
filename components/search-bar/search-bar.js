@@ -34,14 +34,14 @@ export default class SearchBar extends Component {
         return contact.username.toLowerCase().includes(this.state.searchTerm.toLowerCase());
       });
     return (
-      <div className="search-bar" onFocusOut={this.showContacts}>
+      <div className="search-bar" onBlur={this.showContacts}>
         <input
           className="search-filter"
           type="search"
           placeholder="search contacts"
           value={this.state.searchTerm}
           onChange={this.updateSearch}
-          onClick={this.showContacts}
+          onKeyUp={this.showContacts}
         />
         <ActionButton title="searchButton" 
                       label="search" 

@@ -8,7 +8,7 @@ return (
     {contacts.map(contact => (
       <LeftRightLayout
         className="contact"
-        children={() => [
+        children={() => 
           <div>
           <ActionButton
             className="contact-profile"
@@ -23,7 +23,7 @@ return (
             action={() => alert("profile unavailable")}
           />
           </div>
-        ]}
+        }
       />
     ))}
   </div>

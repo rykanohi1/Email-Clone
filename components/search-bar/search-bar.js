@@ -41,7 +41,7 @@ export default class SearchBar extends Component {
           placeholder="search contacts"
           value={this.state.searchTerm}
           onChange={this.updateSearch}
-          onKeyUp={this.showContacts}
+          onFocus={this.showContacts}
         />
         <ActionButton title="searchButton" 
                       label="search" 

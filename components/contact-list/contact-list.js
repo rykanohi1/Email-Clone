@@ -5,9 +5,10 @@ import ActionButton from '../action-button/action-button';
 export default ({className,contacts}) => {
 return (
   <div className={`contact-list ${className}`}>
-    {contacts.map(contact => (
+    {contacts.map((contact, index) => (
       <LeftRightLayout
         className="contact"
+        key={index}
         children={() => 
           <div>
           <ActionButton

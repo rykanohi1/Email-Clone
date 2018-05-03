@@ -6,21 +6,29 @@ export default class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.updateSearch = this.updateSearch.bind(this);
-    this.toggleContacts = this.toggleContacts.bind(this);
+    this.showContacts = this.showContacts.bind(this);
+    this.hideContacts = this.hideContacts.bind(this);
     this.state = {
       searchTerm: '',
       contacts: props.contacts || [],
       isVisible: false
     };
+    document.addEventListener('blur', this.hideContacts);
   };
 
   search() {
     return true;
   };
 
-  toggleContacts() {
-    this.setState(state => ({
-      isVisible: !state.isVisible
+  showContacts() {
+    this.setState(() => ({
+      isVisible: true
+    }));
+  };
+
+  hideContacts() {
+    this.setState(() => ({
+      isVisible: false
     }));
   };
 
@@ -41,8 +49,7 @@ export default class SearchBar extends Component {
           placeholder="search contacts"
           value={this.state.searchTerm}
           onChange={this.updateSearch}
-          onFocus={this.toggleContacts}
-          onBlur={this.toggleContacts}
+          onFocus={this.showContacts}
         />
         <ContactList className={this.state.isVisible ? 'show' : 'hide'} contacts={filteredContacts}/>
         <ActionButton title="searchButton" 

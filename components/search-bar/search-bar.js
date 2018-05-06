@@ -6,29 +6,22 @@ export default class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.updateSearch = this.updateSearch.bind(this);
-    this.showContacts = this.showContacts.bind(this);
-    this.hideContacts = this.hideContacts.bind(this);
+    this.toggleContacts = this.toggleContacts.bind(this);
     this.state = {
       searchTerm: '',
       contacts: props.contacts || [],
       isVisible: false
     };
-    document.addEventListener('blur', this.hideContacts);
   };
 
   search() {
-    return true;
+    this.hideContacts()
   };
 
-  showContacts() {
+  toggleContacts(event) {
+    event.preventDefault()
     this.setState(() => ({
-      isVisible: true
-    }));
-  };
-
-  hideContacts() {
-    this.setState(() => ({
-      isVisible: false
+      isVisible: !this.state.isVisible
     }));
   };
 
@@ -42,21 +35,23 @@ export default class SearchBar extends Component {
         return contact.username.toLowerCase().includes(this.state.searchTerm.toLowerCase());
       });
     return (
-      <div className="search-bar">
-        <input
-          className="search-filter"
-          type="search"
-          placeholder="search contacts"
-          value={this.state.searchTerm}
-          onChange={this.updateSearch}
-          onFocus={this.showContacts}
-        />
-        <ContactList className={this.state.isVisible ? 'show' : 'hide'} contacts={filteredContacts}/>
-        <ActionButton title="searchButton" 
-                      label="search" 
-                      imgSrc={this.props.imgSrc} 
-                      action={this.search}/>           
-        
+      <div className={this.state.isVisible && 'toggle-mask'} onClick={this.toggleContacts}>
+        <div className="search-bar">
+          <input
+            className="search-filter"
+            type="search"
+            placeholder="search contacts"
+            value={this.state.searchTerm}
+            onChange={this.updateSearch}
+            onFocus={this.toggleContacts}
+          />
+          {this.state.isVisible && <ContactList contacts={filteredContacts}/>}
+          <ActionButton title="searchButton"
+                        label="search"
+                        imgSrc={this.props.imgSrc}
+                        action={this.search}/>
+
+        </div>
       </div>
     );
   };

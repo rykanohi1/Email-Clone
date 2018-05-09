@@ -1,8 +1,10 @@
 import React from 'react';
 import {createStore, combineReducers} from 'redux';
-import contactReducer from './reducers/reducer-contacts-stories';
+import ContactReducer from './reducers/reducer-contacts-stories';
 
 const Reducers = combineReducers({
-    contacts: contactReducer
+    contacts: {ContactReducer}
 });
 const storeData = createStore(Reducers); 
+
+export default storeData;
